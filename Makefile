@@ -8,7 +8,7 @@ VERS=1.13
 
 # Use -g to compile the program for debugging.
 #DEBUG = -g -DDEBUG
-DEBUG = -O2
+DEBUG = -O3
 
 # Use -p to profile the program.
 #PROFILE = -p -DPROFILE
@@ -19,7 +19,7 @@ LIBS = -lncurses
 # You shouldn't have to modify anything below this line.
 
 # There's a dynamic format in the object-display routines; suppress the warning
-CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wno-format-security
+CFLAGS = $(DEBUG) $(PROFILE) -fcommon -Wall -Wno-format-security
 
 FILES = \
 	attack.c \
